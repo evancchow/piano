@@ -1,0 +1,3 @@
+Load all samples for each song.
+
+Idea: have some way to encode a song in a more simple data form (e.g. an array for song structure, array for notes, array for rhythm, etc.). This lets you abstract away the song into an easy to use form you can pass into machine learning programs, etc. Then write a converter that will convert those data into the proper .ini files for mixing.

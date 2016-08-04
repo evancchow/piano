@@ -23,38 +23,37 @@ def main(track_file, outputfile=None, interactive=False):
         repl.do_load(track_file)
         repl.cmdloop("Interactive Samplebox session. Type 'help' for help on commands.")
     else:
-        # ########################################################################
-        # # SECTION 1
-        # # Write .ini directly to .wav file instead of continuing to stream song.
-        # # This works! 8/3/2016
-        # repl = Repl(discard_unused_instruments=discard_unused)
-        # repl.do_load(track_file)
-        # repl.do_stream("%s.wav" % track_file.replace(".ini", ""))
-        # sys.exit("Successfully written to .wav file! Exiting ...")
-        # #########################################################################
+        ########################################################################
+        # SECTION 1
+        # Write .ini directly to .wav file instead of continuing to stream song.
+        # This works! 8/3/2016
+        repl = Repl(discard_unused_instruments=discard_unused)
+        repl.do_load(track_file)
+        repl.do_stream("%s.wav" % track_file.replace(".ini", ""))
+        sys.exit("Successfully written to .wav file! Exiting ...")
+        #########################################################################
 
-        ######################################################################
-        # SECTION 2
-        # This just streams the song w/o writing. (Again, not interactive).
-        # Probably want to have either 1 or 2 commented, generally speaking.
+        # ######################################################################
+        # # SECTION 2
+        # # This just streams the song w/o writing. (Again, not interactive).
+        # # Probably want to have either 1 or 2 commented, generally speaking.
 
-        song = Song()
-        song.read(track_file, discard_unused_instruments=discard_unused)
-        with Output() as out:
-            if out.supports_streaming:
-                # mix and stream output in real time
-                print("Mixing and streaming to speakers...")
-                out.play_samples(song.mix_generator(), False)
-                print("\r                          ")
-            else:
-                # output can't stream, fallback on mixing everything to a wav
-                print("(Sorry, streaming audio is not possible, perhaps because you don't have pyaudio installed?)")
-                song.mix(outputfile)
-                mix = Sample(wave_file=outputfile)
-                print("Playing sound...")
-                out.play_sample(mix)
-
-        #######################################################################
+        # song = Song()
+        # song.read(track_file, discard_unused_instruments=discard_unused)
+        # with Output() as out:
+        #     if out.supports_streaming:
+        #         # mix and stream output in real time
+        #         print("Mixing and streaming to speakers...")
+        #         out.play_samples(song.mix_generator(), False)
+        #         print("\r                          ")
+        #     else:
+        #         # output can't stream, fallback on mixing everything to a wav
+        #         print("(Sorry, streaming audio is not possible, perhaps because you don't have pyaudio installed?)")
+        #         song.mix(outputfile)
+        #         mix = Sample(wave_file=outputfile)
+        #         print("Playing sound...")
+        #         out.play_sample(mix)
+        # #######################################################################
 
 
 def usage():
