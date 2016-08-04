@@ -2,7 +2,7 @@ Note: directly to .wav file is decommented in trackmixer.py.
 
 Next, download all piano samples from http://theremin.music.uiowa.edu/MISpiano.html.
 
-Convert them to WAV format for this synthesizer. Also, edit them in REAPER on your host machine so they all line up at the same time (i.e. play the note at the same time, i.e. as soon as possible, i.e. on beat. In other words, remove the margins / empty space from the beginning.
+Convert them to WAV format for this synthesizer. Also, edit them in REAPER on your host machine so they all line up at the same time (i.e. play the note at the same time, i.e. as soon as possible, i.e. on beat. In other words, remove the margins / empty space from the beginning. (either do this by hand, or try going up gradually from -60 DB (no higher than -42 DB) to see if you can do mass WAV TRIM without clipping)
 
 Try creating some songs by hand (manually write .ini files). Just do piano for now. Make sure the piano sounds are good (e.g. not clipped off, start at the right times, etc.).
 
