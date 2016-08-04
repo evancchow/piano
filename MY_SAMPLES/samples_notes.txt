@@ -6,3 +6,7 @@
 
 - ./piano/* filenames:
     Piano.[dynamic in 'pp','mf','ff'].[note, for example 'C4' or 'Gb2'].wav
+
+- Make sure you have an outro (blank silence at the end)! Otherwise your song will get cut off.
+
+- Looks like the notes aren't perfectly on beat. Okay for human touch but problematic here. This is probably b/c not each .wav file has the note begin immediately - some delays in how you press the note.
