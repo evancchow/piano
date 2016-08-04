@@ -1,0 +1,11 @@
+Note: directly to .wav file is decommented in trackmixer.py.
+
+Next, download all piano samples from http://theremin.music.uiowa.edu/MISpiano.html.
+
+Convert them to WAV format for this synthesizer.
+
+Try creating some songs by hand (manually write .ini files). Just do piano for now. Make sure the piano sounds are good (e.g. not clipped off, start at the right times, etc.).
+
+Then start working on script to automatically write these .ini file (don't worry about AI yet).
+
+If you get this far, you're doing really great! 

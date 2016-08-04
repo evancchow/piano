@@ -1,0 +1,6 @@
+To save to a wave file, open the file:
+$ python3 trackmixer -i foobar.ini
+Then stream with output file name.
+$ stream foobar.wav
+Voila! Your .wav file is done.
+
