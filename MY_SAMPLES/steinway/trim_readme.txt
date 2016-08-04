@@ -1,0 +1,1 @@
+Use Wav Trim - a free program to trim files. Set (settings) so that it trims analog sound, and only before -42 or so (which is what REAPER would say is silent). ng (every piano note) will start at the beginning immediately instead of waiting an indefinite amount.
