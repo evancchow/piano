@@ -24,6 +24,7 @@ def main(track_file, outputfile=None, interactive=False):
         repl.cmdloop("Interactive Samplebox session. Type 'help' for help on commands.")
     else:
         # ########################################################################
+        # # SECTION 1
         # # Write .ini directly to .wav file instead of continuing to stream song.
         # # This works! 8/3/2016
         # repl = Repl(discard_unused_instruments=discard_unused)
@@ -31,6 +32,12 @@ def main(track_file, outputfile=None, interactive=False):
         # repl.do_stream("%s.wav" % track_file.replace(".ini", ""))
         # sys.exit("Successfully written to .wav file! Exiting ...")
         # #########################################################################
+
+        ######################################################################
+        # SECTION 2
+        # This just streams the song w/o writing. (Again, not interactive).
+        # Probably want to have either 1 or 2 commented, generally speaking.
+
         song = Song()
         song.read(track_file, discard_unused_instruments=discard_unused)
         with Output() as out:
@@ -46,6 +53,8 @@ def main(track_file, outputfile=None, interactive=False):
                 mix = Sample(wave_file=outputfile)
                 print("Playing sound...")
                 out.play_sample(mix)
+
+        #######################################################################
 
 
 def usage():

@@ -1,0 +1,8 @@
+- for converting .aiff to .wav, use sox.
+    $ sox foo.aiff bar.wav
+
+- play .wav files with audacious.
+    $ audacious foobar.wav
+
+- ./piano/* filenames:
+    Piano.[dynamic in 'pp','mf','ff'].[note, for example 'C4' or 'Gb2'].wav
